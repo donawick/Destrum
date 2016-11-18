@@ -1,9 +1,9 @@
-"""Defines the enemies in the game"""
+
 
 class Enemy:
-    """A base class for all enemies"""
+    """base class """
     def __init__(self, name, hp, damage):
-        """Creates a new enemy
+        """Notes
 
         :param name: the name of the enemy
         :param hp: the hit points of the enemy
@@ -17,7 +17,7 @@ class Enemy:
         return self.hp > 0
 
 
-class GiantSpider(Enemy):
+class Boar(Enemy):
     def __init__(self):
         super().__init__(name="Giant Spider", hp=10, damage=2)
 
@@ -30,3 +30,4 @@ class Ogre(Enemy):
 class Wolf(Enemy):
     def __init__(self):
         super().__init__(name="Wolf", hp=15, damage=5)
+	

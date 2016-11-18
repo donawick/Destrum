@@ -1,12 +1,12 @@
-"""The actions a player can make in the game"""
+
 
 from player import Player
 
 
 class Action():
-    """The base class for all actions"""
+    """Base class"""
     def __init__(self, method, name, hotkey, **kwargs):
-        """Creates a new action
+        """Info
 
         :param method: the function object to execute
         :param name: the name of the action
