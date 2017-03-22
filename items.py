@@ -10,7 +10,6 @@ class Item():
     def __str__(self):
         return "{}\n=====\n{}\nValue: {}\n".format(self.name, self.description, self.value)
 
-
 class Weapon(Item):
     def __init__(self, name, description, value, damage):
         self.damage = damage
@@ -19,14 +18,12 @@ class Weapon(Item):
     def __str__(self):
         return "{}\n=====\n{}\nValue: {}\nDamage: {}".format(self.name, self.description, self.value, self.damage)
 
-
 class Rock(Weapon):
     def __init__(self):
         super().__init__(name="Rock",
                          description="A fist-sized rock, suitable for bludgeoning.",
                          value=0,
                          damage=5)
-
 
 class Dagger(Weapon):
     def __init__(self):
@@ -35,6 +32,12 @@ class Dagger(Weapon):
                          value=10,
                          damage=10)
 
+class Sword(Weapon):
+    def __init__(self, amt):
+        self.amt = amt
+        super().__init__(name="Sword",
+                         description="A medium length sword. Looks to be fairly dull.".format(str(self.amt)),
+                         value=self.amt
 
 class Gold(Item):
     def __init__(self, amt):
